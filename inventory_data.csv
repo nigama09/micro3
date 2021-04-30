@@ -1,0 +1,11 @@
+pid,category,type,size,stock,cost,sp
+101,Shoes,sneakers,8,20,5000,8000
+102,Shoes,running,7,30,4000,5000
+103,Shoes,trainers,6,40,3000,4000
+104,Slippers,cute,5,10,1000,1200
+104,Slippers,daily,6,50,600,650
+106,Slippers,cute,5,30,1000,1200
+107,Heels,Stilettos ,6,5,6000,8000
+108,Heels,Boots,6,3,7000,9000
+109,Heels,Block,6,10,3000,4000
+110,Formal,leather,9,7,4000,6000

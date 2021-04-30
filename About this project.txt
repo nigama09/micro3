@@ -1,0 +1,90 @@
+-->First of all start with creating a folder 
+ *Lets name the folder micro3*
+--> now lets create a httpserver.js file and write the code
+     * save the file and run in command prompt with the command 'node https.js'
+    now based on what localhost address you have mentioned open the browser and type 'localhost:9000'
+     * you should be able to render the page by now *Also remember that everytime you make changes you have to run the file in cmd again to render those changes*
+--> now lets install express js 
+    * use the commad 'npm install exprees' or 'npm i exprees' in your folder to install node modules 
+    
+    * now create a express_server.js file and write the code and run on cmd just like earlier
+     - same steps as earlier
+--> normal html pages are not enough to sustain when creating dynamic webpages so we use embeddedjs (ejs) where we insert small bits of js in html so that no need to create a seperate js file 
+
+--> now open mongoDBcompass
+   -click on connect , it'll show all the databases that you have created earlier
+    - within every db that we created we can have many collections (these collections together make a databse)
+    
+    -now lets create database
+    click on 'create database' button on top left 
+       we usually create database for some app data so here lets name it as 'App_data'->this is your main database
+     in that db give name of one collection name eg. shoes etc 
+ - now after creating app_data db we click on it to find our collection 
+- inside this lets add data to the collections
+- this can be done is 2 ways 
+   - Import File : suppose we have data in an excel sheet and we want to use it then we can just import that excel sheet(usually we use .csv files for data)
+   eg: create an excel sheet with user_name and password 
+     now keeping our mongodb application open on the user page (App_data -> users )open our excel sheet and fill in all the data , now click on save as and while saving save it in the form of '.csv' file (users.csv)
+     now to add this data in our (App_data -> users -> add data -> import file )then browse the file and select the csv file and click on import (we can change the datatype of the fields that are imported but here in this case it is left in its default string) and then click on 'done'
+   - Insert Document
+     here we (App_data -> users -> add data -> Insert Document ) and after clicking on 'Insert Document' a josn object will open up and right next to it there is a list button where we can add our objects
+there on the left side we have a '+' button to add fields/objects for their names and values [since we are adding to same table we have to add same attribute names ]
+*mongoDb is UNSTRUCTURED db so we can change datatypes*
+*please notice that we have 3 types of views here (list,json object,table)*
+*to filter data we give the query in json format in that respective collection in the format {'object_name':'value'} *
+
+
+****HERE COMES THE MAIN PART******
+
+--> in out micro3 we will install pacakages
+    - for 'express' in cmd type 'npm install express' [this step was done earlier so no need to repeat]
+    - now install 'ejs' pacakge so type 'npm install ejs' in cmd
+    - install 'mongodb' pacakage, type 'npm install mongodb@3.6.6'
+    - in cmd type 'node Server.js'
+
+
+--> choose or create a file in which you'll be storing your project so here we are using 'micro3' , to organize  in micro3 lets create another folder 'Inventory'
+
+--> now in 'Inventory' create 2 folders(because that is how the directory structure is for node applications)
+                                      --> 'public' [used for css , images for webpages, or any js files etc]
+                                     |--> 'views' [we use this to maintain or keep our webpages eg. all the ejs files etc]
+ * so the whole client side is running on public and views
+
+ * so what about server?
+--> lets create an empty js file called 'Server.js' (this is used to connect node server i.e we'll write the server code here)
+--> for storing metadata we will need 'pacakge.json' we get this by executing 'npm init' in command prompt
+  [we can skip them all but now we have given 'description' as 'CRUD','entry point:(Server.js)' this comes automatically and we let it be because this is our entry point for server ,'author:' give your name if you want to('Nigama') and skip skip skip and in the end type 'yes'] 
+   --> now youll see your pacakge.json file, but there are no modules included as of now so we will install them
+--> to create server the we need express module 
+     type 'npm install express' in cmd
+--> to connect webpages to client we need ejs module
+     type 'npm install ejs' in cmd
+--> to connect server to mongoDb we need mongodb module 
+     type 'npm install mongodb' in cmd [we can also specify the version as mongodb@3.6.6]
+ *you'll find these changes in pacakag.json in dependencies , also package-lock.json(metadata about modules) and nodemoules install along with the ones above *
+--> now lets create .ejs files for our project in views
+  1. homepage.ejs
+  2. add.ejs
+  3. update.ejs
+  4. delete.ejs
+
+--> create a 'styles.css' file in public folder
+
+--> now go to 'Server.js' and code
+
+--> in mongodb create database
+
+--> install 'nodemon ' so that we dont have to run/start agian and again just type 'nodemon Server.js' in cmd
+
+-->in cmd node server.js to render the page
+
+-->now in the codelabs page go to adminLTE bootstrap reference link 
+   - download 'source code' --> zip file in the bottom
+   - unzinp in inventory folder and copy files dist and plugins(C:\Users\Nigama\Desktop\micro3\Inventory\AdminLTE-3.1.0) to public file to our inventory
+ -->the template we are choosing will be from (C:\Users\Nigama\Desktop\micro3\Inventory\AdminLTE-3.1.0\pages\examples->project) now we like the template but dont want same stuff so we will remove the code and copy others.
+lets create a stock_details.ejs file in views and just apply all the styling that we need from already existing  styles
+
+
+
+
+
